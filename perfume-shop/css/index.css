@@ -1,0 +1,449 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    
+}
+ /* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(78, 45, 242);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(78, 45, 242);
+  }
+body{
+    background-color: #fff;
+    padding-top:100px;
+}
+#button-exit{
+    margin: -40px 0 -20px auto;
+    width:20px;
+    display:block;
+    font-size:25px;
+    background:transparent;
+    color:black;
+    font-weight:bold;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+.errors-signup{
+    width:100%;
+    margin-top:135px;
+    justify-content:center;
+    text-align:center;
+    align-items: center;
+}
+.errors{
+    width:100%;
+    margin:15px auto;
+    position:absolute;
+    justify-content:center;
+    text-align:center;
+    align-items: center;
+}
+.container-login{
+    margin-top:70px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-login .login{
+    background: white;
+    width:430px;
+    height: 340px;
+    border-radius:10px 10px 10px 10px;
+    padding: 2%;
+    box-shadow: 0 5px 8px 0 rgba(10, 10, 219, 0.2), 0 9px 26px 0 rgba(11, 11, 225, 0.19);
+}
+.login .btnSubmit{
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(180deg, darkblue, blue);
+    width: 100%;
+    height:45px;
+    font-size:18px;
+    margin-top:10px;
+    margin-bottom: 30px;
+}
+.ForgetPwd{
+margin-top:-10px;
+}
+.login .ForgetPwd, .reg{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;    
+}
+.form-group2{
+    margin-top: -20px;
+    
+}
+.form-group3{
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.login .ForgetPwd:hover, 
+.login .reg:hover{
+    color:gray;
+}
+.login h3{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    }
+.container-register{
+    display: flex;
+    justify-content: center;
+    margin-bottom:50px;
+    margin-top:50px;
+    width:100%;
+}
+.container-register .register{
+    background: white;
+    justify-content:center;
+    align-items: center;
+    height: 580px;
+    border-radius:10px;
+    padding:60px 50px;
+    box-shadow: 0 5px 8px 0 rgba(10, 10, 219, 0.2), 0 9px 26px 0 rgba(11, 11, 225, 0.19);
+
+}
+.container-register .register ul{
+    display: flex;
+    margin-bottom:10px;
+}
+.container-register .register ul li{
+    list-style: none;
+    margin:0 15px;
+}
+
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.register .btnSubmit{
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(180deg, darkblue, blue);
+    width: 300px;
+}
+.login .btnSubmit:hover,
+.register .btnSubmit:hover{
+    background-color:whitesmoke;
+    color:black;
+    box-shadow:0 0 3px 0 black;
+    border-radius: 1rem;
+}
+
+.form-control{
+    height: 38px;
+    margin-bottom: 10px;
+    width:240px;
+}
+.form-control5{
+    height: 38px;
+    margin-bottom: 10px;
+    width:100%;
+}
+.labels{
+    margin-bottom:5px;
+}
+.form-group1{
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.form-group input[type=text],
+.form-group input[type=password],
+.form-group1 input[type=text],
+.form-group1 input[type=password]{
+    padding-left:43px;
+}
+.form-group #regs{
+    position: absolute;
+    width: 40px;
+    background-color: transparent;
+    padding:18.5px 0px;
+    color:black;
+    
+}
+.form-group1 #ics{
+    position: absolute;
+    width: 40px;
+    background-color: transparent;
+    margin-top: 1px;
+    margin-left: 1px;
+    padding:18px 0;
+    color:black;
+}
+.form-group1 #ics1{
+    position: absolute;
+    width: 40px;
+    background-color: transparent;
+    margin-top: 1px;
+    margin-left: 1px;
+    padding:18px 0;
+    color:black;
+}
+
+.form-group input[type=text]:focus + .fas,
+.form-group input[type=password]:focus + .fas{
+    color:black;
+    background: whitesmoke;
+}
+.form-group1 input[type=text]:focus + .fas,
+.form-group1 input[type=password]:focus + .fas{
+    color:whitesmoke;
+    background: black;
+}
+.register .terms{
+    margin-bottom: 5px;
+}
+.form-group2{
+    margin-bottom: 25px;
+}
+.register .terms a{
+    text-decoration: none;
+}
+.register h3{
+text-align: left;
+font-size: 25px;
+margin-top: -15px;
+margin-bottom: 30px;
+font-weight: bold;
+}
+
+.register #terms-label{
+    font-size: 15px;
+    
+   
+}
+.register label a{
+    text-decoration: underline;
+    font-weight: bold;
+    
+}
+.form-group3 a:hover,
+.register label a:hover{
+    color: gray;
+}
+#show,#show1,#show2,#show3{
+    margin-left:-40px;
+    width:40px;
+    height:38px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+#hide,#hide1,#hide2,#hide3{
+    margin-left:-40px;
+    width:40px;
+    height:38px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+#for-address-style{
+    width: 100%;
+}
+@media (min-height: 991px) {
+    .container-login{
+        margin-top: 250px;
+    }
+    .container-login .login{   
+        padding: 5%;
+    }
+
+    .container-register{
+       margin-top:20px;
+    }
+    
+}
+@media (max-width: 991px) {
+    #for-address-style{
+        width: auto;
+    }
+    .container-login .login{   
+        padding: 3%;
+    }
+    .container-register .register{   
+        padding: 20px;
+        height:720px;
+        width:440px !important;
+    }
+    .form-control{
+        width:100%;
+    }
+    .container-register .register ul{
+        display: block;
+        margin:0;
+    }
+    .container-register .register ul li{
+        margin-right: 0;
+        margin-left:-25px;
+    }
+    .labels{
+        display: none;
+    }
+    .register h3{
+        text-align: center;
+        margin-top:40px;
+        margin-bottom: 20px;
+    }
+    .terms{
+        padding-left:20px;
+        padding-right:20px;
+    }
+    
+.register #terms-label{
+   margin-left:-20px;
+   text-align: default;
+}
+.register .btnSubmit{
+    width:100%;
+    height: 50px;
+    }
+}
+@media (max-width: 600px) {
+    .container-login{
+        padding:100px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .container-login .login{   
+        padding: 5%; 
+    }
+}
+@media (max-width: 480px) {
+   body{
+    background-color: white;
+   }
+   #button-exit{
+    margin: -5px -5px -15px auto;
+
+   }
+    .container-login{
+        margin-top:50px;
+        margin-left:0;
+        margin-right:0;
+        margin-bottom:0;
+        padding:0px;
+    }
+    .container-login .login{   
+        padding: 6%;
+        height:750px;
+        line-height: 60px;
+        border-radius:none;
+        box-shadow: none;
+    }
+    .container-register {   
+        margin-top:40px;
+        margin-bottom:80px;
+    }
+    .container-register .register{  
+        margin:0;
+        height:600px;
+        border-radius:none;
+        box-shadow: none;
+    }
+    .form-group1 #ics1{
+        margin-top:13px;
+    }
+    .form-control5{
+        line-height: 20px;
+    }
+    .login .btnSubmit{
+        width: 100%;
+        font-size:25px;
+        height: 60px;
+        line-height:20px;
+    }
+    .ForgetPwd{
+        font-size:18px;
+    }
+    .login h3{
+        margin-top: 150px;
+        font-size: 30px;
+    }
+    .form-group2, .form-group3{
+        font-size:19px;
+    }
+    .register h3{
+        font-size: 35px;
+        margin-top:-35px;
+    }    
+    .register label{
+        font-size: 15px;
+        
+    }
+    .register .btnSubmit{
+        height: 60px;
+        font-size:25px;
+        margin-top:15px;
+        margin-bottom:-5px;
+    }
+
+    .errors{
+        margin-top:80px;
+    }
+}
+@media (max-width: 440px) {
+    .register h3{
+        margin-top: 0px;
+    } 
+
+}
+@media(max-width:420px){
+    .container-login .login{   
+        height:705px;
+       
+    }
+    .form-group2{
+        font-size:17px;
+    }
+    .form-group3{
+        font-size:17px;
+    }
+    .register h3{
+        margin-top: -15px;
+    } 
+    .register .btnSubmit{
+        height: 60px;
+        margin-top:15px;
+    }
+}
+@media(max-width:380px){
+    .container-login .login{   
+        height:640px;
+    }
+    .login h3{
+        font-size: 30px;
+    }
+    .register .btnSubmit{
+        height: 50px;
+    }
+    .register h3{
+        margin-top: -45px;
+    } 
+}

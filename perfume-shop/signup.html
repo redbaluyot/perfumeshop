@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title id="title">Register</title>
+    <!--For Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/index.css" media="screen">
+    <link rel="stylesheet" href="css/navbar.css" media="screen">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="position: fixed;top:0;width:100%;z-index:999;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src = "images/logo.png" style = "height:65px;width:75px;background: #fff;"/>
+        </a>
+          <ul class="navbar-nav ms-auto" style = "display:flex;flex-direction:row;gap:25px;">
+              <li class="nav-item">
+                <a class="nav-link text-center" aria-current="page" href="menu.html"><i class="fa-solid fa-bottle-droplet"></i><br>Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="index.html"><i class="fa-solid fa-right-to-bracket"></i><br>Login</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+    <!--Dito maglalagay ng content-->
+    <section id = "container-register" class="container-register">
+    <div class ="register">
+            <div class="card-image"></div>
+            <h3>SIGN UP</h3>
+            <form>
+                <ul id ="first-ul">
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="username">Username</label></b></div>
+                            <i id = "regs" class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" class="form-control" placeholder="Username"  name="username" required maxlength="20" minlength="8" onkeypress="if(event.keyCode==32)event.returnValue=false;" style="font-size:15px;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="firstName">First Name</label></b></div>
+                            <i id = "regs" class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" class="form-control" placeholder="First Name" name="firstName" required="true" onkeypress="if(event.keyCode<32 || event.keyCode>32 && event.keyCode<65 || event.keyCode>90 && event.keyCode<97 || event.keyCode>122)event.returnValue=false;"style="font-size:15px;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="lastName">Last Name</label></b></div>
+                            <i id = "regs" class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" class="form-control" placeholder="Last Name" name="lastName" required="true" onkeypress="if(event.keyCode<32 || event.keyCode>32 && event.keyCode<65 || event.keyCode>90 && event.keyCode<97 || event.keyCode>122)event.returnValue=false;" style="font-size:15px;">
+                        </div>
+                    </li>
+                </ul>
+                <ul id="second-ul">
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="email">Email</label></b></div>
+                            <i id = "regs" class="fas fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="email" id="eml" class="form-control" placeholder="Email " name="email" required onkeypress="if(event.keyCode==32)event.returnValue=false;"  style="padding-left:43px;font-size:13px;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="phone">Contact Number</label></b></div>
+                            <i id = "regs" class="fas fa-phone fa-lg fa-fw" aria-hidden="true"></i>  
+                            <input type="text" id="phone" class="form-control" placeholder="09123456789 " name="phone" required pattern="[0-9]{11}" maxlength="11" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" style="font-size:15px;">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="gender">Gender</label></b></div>
+                            <i id = "regs" class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" id="gender" class="form-control" placeholder="Female or Male " name="gender" required onkeypress="if(event.keyCode<32 || event.keyCode>32 && event.keyCode<65 || event.keyCode>90 && event.keyCode<97 || event.keyCode>122)event.returnValue=false;" style="font-size:15px;">
+                        </div>
+                    </li>
+                </ul>
+                <ul style = "width:100%;">
+                    <li id = "for-address-style">
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="address">Address</label></b></div>
+                            <i id = "regs" class="fas fa-location-dot fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" class="form-control" placeholder="Address"  name="address" required style="width:100%;font-size:15px;">
+                        </div>
+                    </li>
+                </ul>
+                <ul id="third-ul">
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="password">Password</label></b></div>
+                            <div style = "display:flex;">
+                                <i id = "regs" class="fas fa-key fa-lg fa-fw" aria-hidden="true"></i>
+                                <input id = "pass1" type="password"  class="form-control" placeholder="Password " name="password" minlength="8" maxlength="" required="true" onkeypress="if(event.keyCode==32)event.returnValue=false;" style="font-size:15px;">
+                                <button type = "button" id = "show2" onclick = "showpassword2();"><i id = "for-show" class = "fas fa-eye"></i></button>
+                                <button type = "button" id = "hide2" onclick = "hidepassword2();"hidden><i class="fa-solid fa-eye-slash" ></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <div class="labels"><b><label for ="password">Confirm Password</label></b></div>
+                            <div style = "display:flex;">
+                                <i id = "regs" class="fas fa-key fa-lg fa-fw" aria-hidden="true"></i>
+                                <input id = "pass2" type="password" class="form-control" placeholder="Confirm Password "  minlength="8" maxlength="" name="cpassword" required="true" onkeypress="if(event.keyCode==32)event.returnValue=false;" style="font-size:15px;">
+                                <button type = "button" id = "show3" onclick = "showpassword3();"><i id = "for-show" class = "fas fa-eye"></i></button>
+                                <button type = "button" id = "hide3" onclick = "hidepassword3();"hidden><i class="fa-solid fa-eye-slash" ></i></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                    <div class="form-group2 mt-1">
+                        <center><input type="submit" class="btnSubmit" name="signup" id ="btn" value="Submit" /></center>
+                    </div>
+                        <center> <div class="form-group3"><p >Already have an account? <a href="index.html" class="reg">Login Here</a></p></center>
+                    </div>
+            </form>
+        </div>    
+    </section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type = "text/javascript">
+   (function(){
+    document.getElementById("show2").setAttribute("hidden","hidden");
+    $('#pass1').keyup(function(){
+        var empty = false;
+        document.getElementById("show2").removeAttribute("hidden");
+        $('#pass1').each(function(){
+            if($(this).val()== ''){
+                empty = true;
+                document.getElementById("show2").setAttribute("hidden","hidden");
+            }
+        });
+        if(empty){
+            document.getElementById("show2").setAttribute("hidden","hidden");
+            
+        }
+        else{
+            document.getElementById("show2").removeAttribute("hidden");
+            
+        }
+    });
+
+
+
+    var h = document.getElementById("pass1");
+    document.getElementById("show2").setAttribute("hidden","hidden");
+        $('#pass1').keyup(function(){
+    if (h.type === "password") {
+     
+       
+        var empty = false;
+        document.getElementById("show2").removeAttribute("hidden");
+        $('#pass1').each(function(){
+            if($(this).val()== ''){
+                empty = true;
+                document.getElementById("show2").setAttribute("hidden","hidden");
+            }
+        });
+        if(empty){
+            document.getElementById("show2").setAttribute("hidden","hidden");
+            
+        }
+        else{
+            document.getElementById("show2").removeAttribute("hidden");
+            
+        }
+   
+    } 
+    else{
+        var empty = false;
+        document.getElementById("hide2").removeAttribute("hidden");
+        $('#pass1').each(function(){
+            if($(this).val()== ''){
+                empty = true;
+                document.getElementById("hide2").setAttribute("hidden","hidden");
+            }
+        });
+        if(empty){
+            document.getElementById("hide2").setAttribute("hidden","hidden");
+            
+        }
+        else{
+            document.getElementById("hide2").removeAttribute("hidden");
+            
+        }
+    }
+});
+
+
+
+var j = document.getElementById("pass2");
+    document.getElementById("show3").setAttribute("hidden","hidden");
+        $('#pass2').keyup(function(){
+    if (j.type === "password") {
+     
+       
+        var emptys = false;
+        document.getElementById("show3").removeAttribute("hidden");
+        $('#pass2').each(function(){
+            if($(this).val()== ''){
+                emptys = true;
+                document.getElementById("show3").setAttribute("hidden","hidden");
+            }
+        });
+        if(emptys){
+            document.getElementById("show3").setAttribute("hidden","hidden");
+            
+        }
+        else{
+            document.getElementById("show3").removeAttribute("hidden");
+            
+        }
+   
+    } 
+    else{
+        var emptys = false;
+        document.getElementById("hide3").removeAttribute("hidden");
+        $('#pass2').each(function(){
+            if($(this).val()== ''){
+                emptys = true;
+                document.getElementById("hide3").setAttribute("hidden","hidden");
+            }
+        });
+        if(emptys){
+            document.getElementById("hide3").setAttribute("hidden","hidden");
+            
+        }
+        else{
+            document.getElementById("hide3").removeAttribute("hidden");
+            
+        }
+    }
+});
+})()
+    
+</script>
+<script>
+    function showpassword2() {
+    var x = document.getElementById("pass1");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+    document.getElementById("show2").setAttribute("hidden","hidden");
+    document.getElementById("hide2").removeAttribute("hidden");
+    }
+    function hidepassword2() {
+    var y = document.getElementById("pass1");
+    if (y.type === "password") {
+        y.type = "text";
+    } else {
+        y.type = "password";
+    }
+    document.getElementById("show2").removeAttribute("hidden");
+    document.getElementById("hide2").setAttribute("hidden","hidden");
+    }
+    function showpassword3() {
+    var x = document.getElementById("pass2");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+    document.getElementById("show3").setAttribute("hidden","hidden");
+    document.getElementById("hide3").removeAttribute("hidden");
+    }
+    function hidepassword3() {
+    var y = document.getElementById("pass2");
+    if (y.type === "password") {
+        y.type = "text";
+    } else {
+        y.type = "password";
+    }
+    document.getElementById("show3").removeAttribute("hidden");
+    document.getElementById("hide3").setAttribute("hidden","hidden");
+    }
+
+   
+</script>
+<script>
+       function exitbutton(){
+        var exitname = document.getElementById("errors").style.display = "none";
+       }
+       setTimeout("exitbutton()",5000);
+        </script>
+</body>
+</html>
+<style>
+  #error-message{
+    color:red;
+    font-size:13px;
+  }
+</style>

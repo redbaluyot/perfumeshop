@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+     <!--For Icons-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+     <!--CSS-->
+     <link rel="stylesheet" href="css/navbar.css" media="screen">
+     <link rel="stylesheet" href="css/menu.css" media="screen">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="position: fixed;top:0;width:100%;z-index:999;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+              <img src = "images/logo.png" style = "height:65px;width:75px;background: #fff;"/>
+          </a>
+          <ul class="navbar-nav ms-auto" style = "display:flex;flex-direction:row;gap:25px;">
+              <li class="nav-item">
+                <a class="nav-link text-center" aria-current="page" href="menu.html"><i class="fa-solid fa-bottle-droplet"></i><br>Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" href="index.html"><i class="fa-solid fa-right-to-bracket"></i><br>Login</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+
+      <div id = "items-main-container" class="container-sm">
+        <h2 class="mb-3">Perfumes</h2>
+        <div class = "items-container">
+            
+            <div class="card">
+                <img src="images/LacosteBlack.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">LACOSTE BLACK</h5>
+                    <p class="text-description card-text">BRAND: LACOST</p>
+                    <p class="card-text">₱ 900.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/LacosteBlue.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">LACOSTE BLUE</h5>
+                    <p class="text-description card-text">BRAND: LACOSTE</p>
+                    <p class="card-text">₱ 500.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/LacosteWhite.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">LACOSTE WHITE</h5>
+                    <p class="text-description card-text">BRAND: LACOSTE</p>
+                    <p class="card-text">₱ 600.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/LacosteRed.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">LACOSTE RED</h5>
+                    <p class="text-description card-text">BRAND: LACOSTE</p>
+                    <p class="card-text">₱ 700.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/LacosteGreen.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">LACOSTE GREEN</h5>
+                    <p class="text-description card-text">BRAND: LACOSTE</p>
+                    <p class="card-text">₱ 500.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/LacostePink.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">LACOSTE PINK</h5>
+                    <p class="text-description card-text">BRAND: LACOSTE</p>
+                    <p class="card-text">₱ 500.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/Meow.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MEOW</h5>
+                    <p class="text-description card-text">BRAND: KATY PERRY</p>
+                    <p class="card-text">₱ 500.00</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#addtoCart">Add to Cart</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="modal fade" id="addtoCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add this to cart?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                   
+                        <form>
+                        <div class="modal-body">
+                           
+                            <div class="form-group mb-3">
+                                <label for="exampleInputEmail1">Quantity</label>
+                                <input id="quantity" type="text" name="quantity" class="form-control" oninput="calculateTotal()" placeholder="Quantity" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" required>
+                            </div>
+        
+                            <div class="form-group mb-3">
+                                <label for="exampleInputEmail1">Price</label>
+                                <input id="price" type="text" name="price" class="form-control" placeholder="Price" value="50" readonly>
+                            </div>
+        
+                            <div class="form-group mb-3">
+                                <label for="exampleInputEmail1">Total</label>
+                                <input id="total" type="text" name="total" class="form-control" placeholder="Total" value="50" readonly>
+                            </div>
+                            <button type="submit" name="addCart" class="btn btn-primary">ADD TO CART</button>
+                        </div>
+                    </form>
+                </div>
+
+                <script>
+                    function calculateTotal() {
+                        var quantity = parseFloat(document.getElementById('quantity').value);
+                        var price = parseFloat(document.getElementById('price').value);
+        
+                        // If price is not provided, assume it's 0
+                        if (isNaN(price)) {
+                            price = 0;
+                        }
+        
+                        var total = quantity * price;
+        
+                        // Check if quantity is a valid number
+                        if (!isNaN(total)) {
+                            document.getElementById('total').value = total.toFixed(2); // Adjust to your desired precision
+                        } else {
+                            document.getElementById('total').value = ""; // Clear the total if invalid input
+                        }
+                    }
+        </script>
+            </div>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
